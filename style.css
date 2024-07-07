@@ -1,0 +1,290 @@
+:root{
+    --web-base: rgb(48, 44, 63);
+    --web-bold: rgb(23, 21, 24);
+}
+
+input:focus{
+    outline: none;
+}
+html{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(111, 110, 129);
+
+}
+header{
+    height: 70px;
+    width: 100%;
+
+    background-color: var(--web-base);
+
+    top:0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 5px 5px 9px rgba(34, 34, 34, 0.363);
+}
+.addTableHeader{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245, 222, 179, 0);
+    border: none;
+}
+
+
+.addTableHeaderImg{
+    height: 22px;
+    width: 22px;
+}    
+.errorTable{
+    width: 600px;
+    height: 90px;
+
+    background-color: rgb(207, 23, 23);
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgb(138, 15, 15);;
+
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: errorTable;
+    animation-duration: 2s;
+    
+}
+@keyframes errorTable {
+    0%{top: -200px;}
+    50%{top: 0px;}
+    100%{top: -200px;}
+}
+.errorTableP{
+    color: white;
+    font-weight: 600;
+}
+
+#xInput{
+    border: none;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0);
+    
+}
+#xInput:hover{
+    border: 1px solid var(--web-bold);
+}
+
+#yInput{
+    border: none;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0);
+}
+#yInput:hover{
+    border: 1px solid var(--web-bold);
+}
+
+#addTableButton{
+    border: none;
+    background-color: white;
+    width: 85px;
+    height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+}
+#addTableButton:hover{
+    background-color: rgb(216, 216, 216);
+}
+#addTableButton:active{
+    background-color: rgb(192, 190, 190);
+}
+#tableContainer{
+width: 100%;
+height: auto;
+
+
+
+display: flex;
+flex-wrap: wrap;
+justify-content: left;
+align-items:start;
+
+
+}
+
+.table{
+
+    background-color: rgb(255, 233, 160);
+    border-radius: 8px;
+    margin: 25px 10px;
+    display: flex;
+    flex-direction: column;
+
+    animation-name: popanim;
+    animation-duration: 0.35s;
+
+    
+}
+@keyframes popanim {
+    0%{transform: scaleX(0);}
+
+
+    100%{transform: scaleX(1);}
+
+}
+
+
+.table-header{
+    background-color: rgb(231, 194, 138);
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.table-header-cross{
+height: auto;
+width: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(245, 222, 179, 0);
+border: none;
+}
+.table-header-cross-image{
+height: 30px;
+width: 30px;
+}
+.table-header-cross-image:hover{
+    background-color: rgba(90, 90, 90, 0.096);
+    border-radius: 5px;
+}
+.table-header-cross-image:active{
+    background-color: rgba(61, 61, 61, 0.185);
+    border-radius: 5px;
+}
+
+.table-task-section{
+
+width: 100%;
+height: auto;
+
+}
+.row-table.dragging{
+   opacity: 0;
+}
+.row-table-div{
+    display: flex;
+    align-items: center;
+    background-color: rgba(165, 42, 42, 0);
+    justify-content: space-between;
+
+}
+.row-table-input{
+    width: 200%;
+    height: 30px;
+    background-color: rgba(25, 147, 253, 0);
+    border: none;
+
+}
+.row-table-input:hover{
+    background-color: rgba(75, 75, 75, 0.13);  
+    border-radius: 5px;
+}
+.table-row-cross{
+
+    background-color: rgba(255, 168, 7, 0);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+.table-row-cross-image{
+
+    height: 30px;
+    width: 30px;
+}
+.table-row-cross-image:hover{
+    background-color: rgba(90, 90, 90, 0.096);
+    border-radius: 5px;
+}
+.table-row-cross-image:active{
+    background-color: rgba(61, 61, 61, 0.185);
+    border-radius: 5px;
+}
+.table-row-add-button{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245, 222, 179, 0);
+    border: none;
+}
+.table-row-add-image{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(231, 194, 138);
+    border-radius: 100%;
+}
+.table-row-add-image:hover{
+    background-color: rgb(206, 172, 121);
+
+}
+.table-row-add-image:active{
+    background-color: rgb(184, 152, 106);
+
+}
+.addWindow{
+    height: auto;
+    width: 400px;
+    background-color: rgba(134, 131, 156, 0.959);
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 9px rgba(0, 0, 49, 0.363);
+    
+}
+.addWindow-div-inputs{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.addWindow-div-colors{
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.addWindow-inputs{
+    width: 90px;
+    height: 30px;
+}
+.createTableButton{
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+

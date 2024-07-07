@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag To Table!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div id="addTableButton"  class="addTableHeader">
+            <img src="images/add.png" alt="" class="addTableHeaderImg" id="addTableHImg">
+            <div class="addWindow" id="add-window">
+                <div class="addWindow-div-inputs">
+                    <label for="">Nombre</label><input type="text" id="newName" class="addWindow-inputs"><br>
+                    <label for="">Ancho</label><input type="text" id="xInput" value="400"><br>
+                </div>
+                <div class="addWindow-div-colors">
+                    <label for="">Header Color</label><input type="color" value="#e7c28a" id="headerColor"><br>
+                    <label for="">Base Color</label><input type="color" value="#ffe9a0" id="baseColor"><br>
+
+                </div>
+
+                <button onclick="addTable()" class="createTableButton">Añadir</button>
+            </div>
+        </div>
+        <div class="errorTable" id="errorTable">
+            <p class="errorTableP">Error! You need at least 1 row in your note</p>
+        </div>
+    </header>
+    <section id="tableContainer">
+
+
+    </section>
+
+</body>
+<script src="js/fakebackend.js"></script>
+<script src="js/index.js"></script>
+</html>
